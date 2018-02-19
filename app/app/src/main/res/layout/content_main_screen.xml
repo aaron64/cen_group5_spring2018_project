@@ -8,10 +8,9 @@
     tools:context="honeydo.squad5.honeydo.MainScreen"
     tools:showIn="@layout/activity_main_screen">
 
-    <android.support.design.widget.FloatingActionButton
+    <!--<android.support.design.widget.FloatingActionButton
         android:id="@+id/floatingActionButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/"
-        app:fabSize="normal" />
+        app:fabSize="normal" />-->
 </android.support.constraint.ConstraintLayout>

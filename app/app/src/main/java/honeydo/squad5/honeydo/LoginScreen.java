@@ -12,4 +12,9 @@ public class LoginScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_screen);
     }
+
+    private boolean attemptLogin(String user, String pass)
+    {
+        return true;
+    }
 }
