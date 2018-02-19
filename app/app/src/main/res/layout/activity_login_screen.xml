@@ -4,15 +4,45 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:background="@color/col4"
     tools:context="honeydo.squad5.honeydo.LoginScreen">
 
-    <TextView
+    <EditText
+        android:id="@+id/email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        tools:layout_editor_absoluteX="85dp"
+        tools:layout_editor_absoluteY="159dp" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        tools:layout_editor_absoluteX="85dp"
+        tools:layout_editor_absoluteY="232dp" />
+
+    <Button
+        android:id="@+id/login2"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Sign Up"
+        tools:layout_editor_absoluteX="92dp"
+        tools:layout_editor_absoluteY="411dp" />
+
+    <Button
+        android:id="@+id/login"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Sign In"
+        tools:layout_editor_absoluteX="92dp"
+        tools:layout_editor_absoluteY="335dp" />
 
 </android.support.constraint.ConstraintLayout>

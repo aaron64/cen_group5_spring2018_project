@@ -2,6 +2,8 @@ package honeydo.squad5.honeydo;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Html;
+import android.widget.TextView;
 
 public class LoginScreen extends AppCompatActivity {
 
