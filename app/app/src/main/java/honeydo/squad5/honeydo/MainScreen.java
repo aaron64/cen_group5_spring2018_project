@@ -6,6 +6,8 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.Button;
+import android.widget.Spinner;
 
 public class MainScreen extends AppCompatActivity {
 
@@ -13,9 +15,14 @@ public class MainScreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_screen);
-        /*Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
+        Button settings = (Button) findViewById(R.id.settings);
+        Button rewards = (Button) findViewById(R.id.rewards);
+        Button add = (Button) findViewById(R.id.add);
+        Spinner filter = (Spinner) findViewById(R.id.filter);
+        //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        //setSupportActionBar(toolbar);
+        /*
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
