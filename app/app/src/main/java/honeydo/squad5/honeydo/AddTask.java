@@ -10,5 +10,5 @@ import android.view.View;
  * Created by Nix95_000 on 2/20/2018.
  */
 
-public class TaskScreen {
+public class AddTask {
 }
