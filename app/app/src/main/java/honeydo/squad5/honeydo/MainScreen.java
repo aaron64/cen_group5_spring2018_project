@@ -1,5 +1,6 @@
 package honeydo.squad5.honeydo;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -16,7 +17,6 @@ import java.util.Date;
 
 public class MainScreen extends AppCompatActivity {
 
-    ArrayList<Task> taskList;
     RecyclerView taskListView;
     TaskAdapter adapter;
 
@@ -33,29 +33,37 @@ public class MainScreen extends AppCompatActivity {
         taskListView.setHasFixedSize(true);
         taskListView.setLayoutManager(new LinearLayoutManager(this));
 
-        taskList = new ArrayList<Task>();
+        TaskSystem.addTask(new Task("Test body", "Test 1", true, null, null, null));
+        TaskSystem.addTask(new Task("Test body", "Test 2", true, null, null, null));
+        TaskSystem.addTask(new Task("Test body", "Test 3", true, null, null, null));
+        TaskSystem.addTask(new Task("Test body", "Test 4", true, null, null, null));
+        TaskSystem.addTask(new Task("Test body", "Test 5", true, null, null, null));
 
-        taskList.add(new Task("Test body", "Test 1", true, null, null, null));
-        taskList.add(new Task("Test body", "Test 2", true, null, null, null));
-        taskList.add(new Task("Test body", "Test 3", true, null, null, null));
-        taskList.add(new Task("Test body", "Test 4", true, null, null, null));
-        taskList.add(new Task("Test body", "Test 5", true, null, null, null));
-
-        adapter = new TaskAdapter(this, taskList);
+        adapter = new TaskAdapter(this, TaskSystem.getTaskList());
         taskListView.setAdapter(adapter);
 
         //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         //setSupportActionBar(toolbar);
-        /*
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.addTaskBtn);
         fab.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
+
+                addTask();
             }
-        });*/
+        });
+    }
+
+    void addTask()
+    {
+        Intent intent = new Intent(this, AddTask.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_TASK_ON_HOME);
+        startActivity(intent);
+        this.finish();
     }
 
 }

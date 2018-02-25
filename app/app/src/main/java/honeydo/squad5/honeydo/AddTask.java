@@ -10,5 +10,11 @@ import android.view.View;
  * Created by Nix95_000 on 2/20/2018.
  */
 
-public class AddTask {
+public class AddTask extends AppCompatActivity{
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_add_task);
+    }
 }

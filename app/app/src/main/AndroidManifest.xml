@@ -19,8 +19,9 @@
         </activity>
         <activity
             android:name=".MainScreen"
-            android:label="@string/title_activity_main_screen"
-            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
+            android:label="@string/title_activity_main_screen"></activity>
+        <activity
+            android:name=".AddTask"></activity>
     </application>
 
 </manifest>
